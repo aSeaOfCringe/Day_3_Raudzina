@@ -74,10 +74,9 @@ public class Day_3 {
         Tasks 3, 4
          */
         System.out.println("\r\n\r\nTasks 3, 4\r\n");
-        BankAccount account1 = new BankAccount();
-        BankAccount account2 = new BankAccount();
-        account1.setBalance(3500.23);
-        account2.setBalance(14.57);
+        double balance;
+        BankAccount account1 = new BankAccount(3500.23);
+        BankAccount account2 = new BankAccount(14.57);
         account1.printBalance();
         account2.printBalance();
         // write a code which tries to withdraw more money than there is in bank account

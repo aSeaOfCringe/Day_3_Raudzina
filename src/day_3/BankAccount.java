@@ -2,21 +2,24 @@ package day_3;
 
 public class BankAccount {
     private double balance;
-    BankAccount(){
-    }
-
-    public void setBalance(double balance){
+    BankAccount(double balance){
         this.balance = balance;
     }
 
-    public void deposit(double amount){
-        if(amount<=5000) balance += amount;
-        else System.out.println("Transaction canceled. Max deposit - 5000 | Your deposit: " + amount);
+    double deposit(double amount){
+        if(amount<=5000) return this.balance += amount;
+        else {
+            System.out.println("Transaction canceled. Max deposit - 5000 | Your deposit: " + amount);
+            return this.balance;
+        }
     }
 
-    public void withdraw(double amount){
-        if(balance>amount) balance -= amount;
-        else System.out.println("There is not enough funds.");
+    double withdraw(double amount){
+        if(balance>amount) return this.balance -= amount;
+        else {
+            System.out.println("There is not enough funds.");
+            return this.balance;
+        }
     }
 
     public void printBalance(){
